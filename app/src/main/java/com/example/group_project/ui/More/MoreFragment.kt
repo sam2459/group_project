@@ -1,18 +1,19 @@
-package com.example.group_project.ui.dashboard
+package com.example.group_project.ui.Task
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.group_project.databinding.FragmentDashboardBinding
+import com.example.group_project.databinding.FragmentMoreBinding
 
-class DashboardFragment : Fragment() {
+class MoreFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
-
+    private var _binding: FragmentMoreBinding? = null
+    private val handler: Handler = Handler(Looper.getMainLooper())
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -22,16 +23,15 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        val moreViewModel =
+            ViewModelProvider(this).get(MoreViewModel::class.java)
+
+        _binding = FragmentMoreBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.ChatInput
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+
         return root
     }
 

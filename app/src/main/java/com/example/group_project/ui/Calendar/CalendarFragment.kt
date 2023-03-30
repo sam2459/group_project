@@ -1,21 +1,17 @@
-package com.example.group_project.ui.home
+package com.example.group_project.ui.Calendar
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.group_project.databinding.FragmentHomeBinding
+import com.example.group_project.databinding.FragmentCalendarBinding
 
-class HomeFragment : Fragment() {
+class CalendarFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
-    private val handler: Handler = Handler(Looper.getMainLooper())
+    private var _binding: FragmentCalendarBinding? = null
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -25,12 +21,10 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val calendarViewModel =
+            ViewModelProvider(this).get(CalendarViewModel::class.java)
 
-
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentCalendarBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
 
