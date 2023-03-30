@@ -1,4 +1,4 @@
-package com.example.group_project.ui.Task
+package com.example.group_project.ui.More
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.group_project.databinding.FragmentMoreBinding
+import com.example.group_project.ui.Task.MoreViewModel
 
 class MoreFragment : Fragment() {
 
