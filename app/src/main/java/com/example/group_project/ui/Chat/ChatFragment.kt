@@ -1,4 +1,4 @@
-package com.example.group_project.ui.Chat
+package com.example.group_project.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.group_project.databinding.FragmentChatBinding
+import com.example.group_project.databinding.FragmentDashboardBinding
 
-class ChatFragment : Fragment() {
+class DashboardFragment : Fragment() {
 
-    private var _binding: FragmentChatBinding? = null
+    private var _binding: FragmentDashboardBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class ChatFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val chatViewModel =
-            ViewModelProvider(this).get(ChatViewModel::class.java)
+        val dashboardViewModel =
+            ViewModelProvider(this).get(DashboardViewModel::class.java)
 
-        _binding = FragmentChatBinding.inflate(inflater, container, false)
+        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        chatViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.ChatInput
+        dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
