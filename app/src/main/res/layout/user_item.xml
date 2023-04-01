@@ -21,6 +21,7 @@
             android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/cardImageflag"
             android:layout_toEndOf="@+id/cardImageflag"
@@ -34,6 +35,8 @@
             android:layout_below="@+id/cardUserName"
             android:layout_alignStart="@+id/cardUserName"
             android:layout_alignLeft="@+id/cardUserName"
+
+            android:textColor="#D0AEABAB"
             android:maxLines="1"
             android:text="None"
             android:textSize="14sp" />
@@ -46,6 +49,7 @@
             android:layout_marginStart="1dp"
             android:layout_marginLeft="268dp"
             android:layout_marginTop="1dp"
+            android:textColor="#D80505"
             android:gravity="center"
             android:layout_toEndOf="@+id/cardUserInfo"
             android:layout_toRightOf="@+id/cardImageflag"

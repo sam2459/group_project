@@ -31,6 +31,21 @@ class Chat : AppCompatActivity() {
         val intent = intent
         val target_Name = intent.getStringExtra("tName")
         val Chat_history = FirebaseDatabase.getInstance().getReference().child("Chat_history")
+        FirebaseDatabase.getInstance().getReference().child(Local_user.name)
+            .child("Friends").child(target_Name!!).get().addOnSuccessListener {
+            Thread {
+                try {
+                    var x = it.getValue(friend::class.java)!!
+                    Log.d("SEND_log", "${x!!.name}")
+                    x.num = 0
+                    FirebaseDatabase.getInstance().getReference().child(Local_user.name)
+                        .child("Friends").child(target_Name).setValue(x)
+                }
+                catch (e:Exception){
+                    return@Thread
+                }
+            }.start()
+        }
         sendButton.setOnClickListener {
 
                 val messageText = messageArea.text.toString()
@@ -41,14 +56,27 @@ class Chat : AppCompatActivity() {
                     msg.to=target_Name
                     msg.text=messageText
                     Chat_history.push().setValue(msg)
-                    /*var x=friend()
-                    FirebaseDatabase.getInstance().getReference().child(target_Name!!).child("Friend").child(Local_user.name).get().addOnSuccessListener {
-                        x= it.getValue(friend::class.java)!!
-                        Log.d("SEND_log","${x!!.name}")
+
+                    FirebaseDatabase.getInstance().getReference().child(target_Name!!).child("Friends").child(Local_user.name).get().addOnSuccessListener {
+                        Thread {
+                            try {
+                                var x = it.getValue(friend::class.java)!!
+                                Log.d("SEND_log", "${x!!.name}")
+                                x.num = x.num?.plus(1)
+                                x.msg = messageText
+                                FirebaseDatabase.getInstance().getReference().child(target_Name)
+                                    .child("Friends").child(Local_user.name).setValue(x)
+                                x.num = 0
+                                x.name = target_Name
+                                FirebaseDatabase.getInstance().getReference().child(Local_user.name)
+                                    .child("Friends").child(target_Name).setValue(x)
+                            }
+                            catch (e:Exception){
+                                return@Thread
+                            }
+                        }.start()
                     }
-                    x!!.num = x!!.num?.plus(1)
-                    FirebaseDatabase.getInstance().getReference().child(target_Name).child("Friend").child(Local_user.name).setValue(x)
-                    */
+
                 }
                 messageArea.setText("")
         }

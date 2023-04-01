@@ -1,11 +1,11 @@
 package com.example.group_project.ui.Chat
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.group_project.Local_user
@@ -25,6 +25,7 @@ class ChatFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     val users =ArrayList<friend>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -38,6 +39,7 @@ class ChatFragment : Fragment() {
         // Set RecyclerView Adapter
         Log.d("Yes", Local_user.name)
 
+
         val db = FirebaseDatabase.getInstance().getReference().child(Local_user.name).child("Friends")
 
         db.addChildEventListener(object : ChildEventListener {
@@ -47,11 +49,10 @@ class ChatFragment : Fragment() {
                 // A new comment has been added, add it to the displayed list
                 try {
                     val comment: friend? = dataSnapshot.getValue(friend::class.java) ?: return
-
                     users.add(comment!!)
                     val myAdapter = UserAdapter(this@ChatFragment.context!!, users)
                     mRecyclerView.setAdapter(myAdapter)
-                    Log.d("fire", comment.name + comment.msg)
+                    Log.d("fire", users.size.toString()+comment.name + comment.msg)
                 } catch (e: Exception) {
                     return
                 }
@@ -62,6 +63,7 @@ class ChatFragment : Fragment() {
                 previousChildName: String?
             ) {
                 try {
+
                     val comment: friend? = dataSnapshot.getValue(friend::class.java) ?: return
                     if (comment != null) for(i in users.indices) {
                         if (users[i].name == comment.name) {
@@ -70,7 +72,7 @@ class ChatFragment : Fragment() {
                         }
                         val myAdapter = UserAdapter(this@ChatFragment.context!!, users)
                         mRecyclerView.setAdapter(myAdapter)
-                        Log.d("fire", comment.name + comment.msg)
+                        Log.d("fire", "onChildChanged "+comment.name + comment.msg+comment.num.toString())
                     }
                 } catch (e: Exception) {
                     return
