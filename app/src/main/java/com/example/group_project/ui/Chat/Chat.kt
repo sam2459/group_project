@@ -41,8 +41,7 @@ class Chat : AppCompatActivity() {
                     msg.to=target_Name
                     msg.text=messageText
                     Chat_history.push().setValue(msg)
-                    /*
-                    var x=friend()
+                    /*var x=friend()
                     FirebaseDatabase.getInstance().getReference().child(target_Name!!).child("Friend").child(Local_user.name).get().addOnSuccessListener {
                         x= it.getValue(friend::class.java)!!
                         Log.d("SEND_log","${x!!.name}")

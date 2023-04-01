@@ -3,21 +3,21 @@
 
     <item
         android:id="@+id/navigation_task"
-        android:icon="@drawable/item1"
+        android:icon="@drawable/task"
         android:title="@string/title_task" />
 
     <item
         android:id="@+id/navigation_calendar"
-        android:icon="@drawable/item2"
+        android:icon="@drawable/calendar"
         android:title="@string/title_calendar" />
 
     <item
         android:id="@+id/navigation_chat"
-        android:icon="@drawable/item3"
+        android:icon="@drawable/chat"
         android:title="@string/title_chat" />
     <item
         android:id="@+id/navigation_more"
-        android:icon="@drawable/item4"
+        android:icon="@drawable/more"
         android:title="@string/title_more" />
 
 </menu>
