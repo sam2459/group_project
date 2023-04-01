@@ -4,4 +4,20 @@
     <string name="title_calendar">Calendar</string>
     <string name="title_chat">Chat</string>
     <string name="title_more">More</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="type_message">Type Message</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_save">Save</string>
+    <string name="about">About</string>
+    <string name="menu_add">New Friend</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_message">Message</string>
+    <string name="label_profile">Profile</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="find">Find User</string>
+    <string name="find_bt">Add</string>
 </resources>
