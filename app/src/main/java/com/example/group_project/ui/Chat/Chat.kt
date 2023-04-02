@@ -87,7 +87,7 @@ class Chat : AppCompatActivity() {
                     if (msg.from == Local_user.name && msg.to==target_Name) {
                         addMessageBox("You:-\n" + msg.text, 1);
                     } else if(msg.from ==target_Name && msg.to== Local_user.name){
-                        addMessageBox(msg.to + ":-\n" + msg.text, 2);
+                        addMessageBox(msg.from + ":-\n" + msg.text, 2);
                     }
                 }
                 catch (e:Exception){
