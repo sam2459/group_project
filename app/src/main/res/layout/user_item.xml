@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/cardImageflag"
+            android:src="@drawable/ic_user"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:id="@+id/cardUserName"
+            android:text="Name"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/cardImageflag"
+            android:layout_toEndOf="@+id/cardImageflag"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:id="@+id/cardUserInfo"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardUserName"
+            android:layout_alignStart="@+id/cardUserName"
+            android:layout_alignLeft="@+id/cardUserName"
+
+            android:textColor="#D0AEABAB"
+            android:maxLines="1"
+            android:text="None"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Chat_num"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cardUserInfo"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="1dp"
+            android:textColor="#D80505"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/cardUserInfo"
+            android:layout_toRightOf="@+id/cardImageflag"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

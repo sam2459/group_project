@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">group_project</string>
+    <string name="title_task">Task</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_more">More</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="type_message">Type Message</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_save">Save</string>
+    <string name="about">About</string>
+    <string name="menu_add">New Friend</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_message">Message</string>
+    <string name="label_profile">Profile</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="find">Find User</string>
+    <string name="find_bt">Add</string>
+
+    <string name="addtask">Do something...</string>
+    <string name="save">save</string>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="item_name">C/W</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wen">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="course_name">Course Name:</string>
+    <string name="week">Day of Week:</string>
+    <string name="start">Start:</string>
+    <string name="end">End:</string>
+    <string name="teacher">Teacher Name:</string>
+    <string name="classroom">Classroom:</string>
+    <string name="add">ADD</string>
+    <string name="rev">Revise</string>
+    <string name="del">Delete</string>
+    <string name="addordel">add/delete</string>
+
+    <string name="time_warning">The course time is wrong, the end time cannot be earlier than the start time!</string>
+    <string name="delsucc">successfully deleted</string>
+    <string name="info_war">Basic information is not filled!</string>
+
+    <string name="classsch_label">Class Schedule</string>
+    <string name="add_label">Add Course</string>
+    <string name="viewcou_label">Course View</string>
+
+
+    <string-array name="week">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="time">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>
