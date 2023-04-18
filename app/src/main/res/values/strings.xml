@@ -52,6 +52,8 @@
     <string name="classsch_label">Class Schedule</string>
     <string name="add_label">Add Course</string>
     <string name="viewcou_label">Course View</string>
+    <string name="More_title">In Work</string>
+    <string name="More_context">The "InWork" mobile application is a time management and collaboration tool designed for students engaged in group work. The application offers a unique combination of features, including class schedule sharing, to-do lists, and a chat interface.</string>
 
 
     <string-array name="week">
